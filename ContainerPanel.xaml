@@ -1,0 +1,30 @@
+﻿<UserControl
+    x:Class="WinUI3_ActiveX_MSRDP.ContainerPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WinUI3_ActiveX_MSRDP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Name="myContainerPanel">
+
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch"><!--Background="red">-->
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>           
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>-->
+        <!--<Image x:Name="img"
+			   Height="500"
+			   Width="500"
+			   Margin="10,15,0,0"
+			   Source="{Binding Path=Source,ElementName=myContainerPanel}"
+			   VerticalAlignment="Top"
+			   HorizontalAlignment="Left" />-->
+        <Image x:Name="img"			 
+			   Source="{Binding Path=Source,ElementName=myContainerPanel}"
+               Stretch="{Binding Path=Stretch,ElementName=myContainerPanel}"/>
+			   <!--Stretch="Fill"/>-->
+    </Grid>
+</UserControl>

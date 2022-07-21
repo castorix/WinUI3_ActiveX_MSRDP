@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WinUI3_ActiveX_MSRDP (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WinUI3_ActiveX_MSRDP (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

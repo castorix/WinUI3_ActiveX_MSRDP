@@ -384,7 +384,16 @@ namespace WinUI3_ActiveX_MSRDP
         public void OnConnected()
         {
             btnConnect.IsEnabled = false;
-            ContainerPanel1.Show(true);
+            ContainerPanel1.Show(true); 
+            // Could be not refreshed...
+            if (!tsFullscreen.IsOn)
+            {
+                //ContainerPanel.MoveWindow(hWnd, 0, 0, 600, 400, true);
+                RECT rc;
+                GetWindowRect(hWnd, out rc);
+                SetWindowPos(hWnd, (IntPtr)(-1), 0, 0, rc.right - rc.left - 1, rc.bottom - rc.top - 1, SWP_NOZORDER | SWP_NOMOVE | SWP_SHOWWINDOW | SWP_FRAMECHANGED);
+                SetWindowPos(hWnd, (IntPtr)(-1), 0, 0, rc.right - rc.left, rc.bottom - rc.top, SWP_NOZORDER | SWP_NOMOVE | SWP_SHOWWINDOW | SWP_FRAMECHANGED);
+            }
         }
 
         public void OnDisconnected()

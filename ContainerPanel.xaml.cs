@@ -270,7 +270,7 @@ namespace WinUI3_ActiveX_MSRDP
         {
             if (bReset)
                 Source = null;
-            ShowWindow(hWndContainer, SW_SHOWNORMAL);
+            ShowWindow(hWndContainer, SW_SHOWNORMAL);           
         }
 
         private async void CopyImage()
